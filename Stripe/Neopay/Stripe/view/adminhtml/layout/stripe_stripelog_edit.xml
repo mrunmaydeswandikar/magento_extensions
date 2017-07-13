@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="../../../../../../../lib/internal/Magento/Framework/View/Layout/etc/page_configuration.xsd">
+     <update handle="editor"/>
+    <body>
+	   <referenceContainer name="content">
+            <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\Edit" name="stripe_stripelog_edit"/>
+        </referenceContainer>
+		 <referenceContainer name="left">
+            <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\Edit\Tabs" name="stripe_stripelog_edit_tabs">
+				<block class="Neopay\Stripe\Block\Adminhtml\Stripelog\Edit\Tab\StripeForm" name="stripe_stripelog_edit_tab_stripeform"/>
+				 <action method="addTab">
+                    <argument name="name" xsi:type="string">stripeform_section</argument>
+                    <argument name="block" xsi:type="string">stripe_stripelog_edit_tab_stripeform</argument>
+                </action>
+			</block>
+        </referenceContainer>
+    </body>
+</page>

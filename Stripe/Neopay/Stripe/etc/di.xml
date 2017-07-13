@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <virtualType name="Neopay\Stripe\Model\ResourceModel\Stripe\UiCollection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">stripe_data</argument>
+            <argument name="resourceModel" xsi:type="string">Neopay\Stripe\Model\ResourceModel\Stripe</argument>
+        </arguments>
+    </virtualType>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="stripelog_list_data_source" xsi:type="string">Neopay\Stripe\Model\ResourceModel\Stripe\UiCollection</item>
+            </argument>
+        </arguments>
+    </type>
+</config>
+

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<listing xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Ui:etc/ui_configuration.xsd">
+	<columns name= "sales_order_columns">
+        <column name="payment_gateway" class="Neopay\Stripe\Ui\Component\Listing\Column\PaymentMethod">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Payment Gateway</item>
+                    <item name="sortOrder" xsi:type="string" translate="true">100</item>
+                </item>
+            </argument>
+        </column>
+		<column name="stripe_account_number" class="Neopay\Stripe\Ui\Component\Listing\Column\Stripeaccount">
+			<argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Stripe account used</item>
+                    <item name="sortOrder" xsi:type="string" translate="true">104</item>
+                </item>
+            </argument>
+        </column>
+        <column name="stripe_account_email" class="Neopay\Stripe\Ui\Component\Listing\Column\Stripeaccountemail">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="visible" xsi:type="boolean">true</item>
+                    <item name="label" xsi:type="string" translate="true">Stripe account :Email ID</item>
+                    <item name="sortOrder" xsi:type="string" translate="true">105</item>
+                </item>
+            </argument>
+        </column>
+    </columns>
+</listing>

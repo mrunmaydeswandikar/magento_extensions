@@ -1,0 +1,7 @@
+----------
+DEVELOPER DOCS
+----------
+	1. Install composer (https://getcomposer.org/download/)
+	2. Install third party library for Stripe with composer
+		command : composer require stripe/stripe-php
+		This command should add this line "stripe/stripe-php : " "^VERSION_CODE" to your composer.json file

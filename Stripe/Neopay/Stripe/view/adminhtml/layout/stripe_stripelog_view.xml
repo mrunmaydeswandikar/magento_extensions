@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<page xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" layout="admin-2columns-left" xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
+    <body>
+        <referenceContainer name="left">
+            <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\View\Tabs" name="stripelog_edit_tabs">
+                <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\View\Tab\Main" name="stripelog_edit_tab_main" />
+                <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\View\Tab\Payment" name="stripelog_edit_tab_payment" />
+                <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\View\Tab\StripeDetails" name="stripelog_edit_tab_stripedetails" />
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">main_section</argument>
+                    <argument name="block" xsi:type="string">stripelog_edit_tab_main</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">payment_section</argument>
+                    <argument name="block" xsi:type="string">stripelog_edit_tab_payment</argument>
+                </action>
+                <action method="addTab">
+                    <argument name="name" xsi:type="string">stripe_section</argument>
+                    <argument name="block" xsi:type="string">stripelog_edit_tab_stripedetails</argument>
+                </action>
+            </block>
+        </referenceContainer>
+        <referenceContainer name="content">
+            <block class="Neopay\Stripe\Block\Adminhtml\Stripelog\View" name="stripelog_edit" />
+        </referenceContainer>
+    </body>
+</page>
